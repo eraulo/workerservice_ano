@@ -4,7 +4,13 @@
     </head>
     <body>
         <p>Hello World</p>
-        <a href="site1/">Site</a>
+        <script>
+        if('serviceWorker' in navigator) {  
+            navigator.serviceWorker  
+                .register('/service-worker.js')  
+                .then(function() { console.log('Service Worker Registered'); });  
+        }
+        </script>
     </body>
 </html>
 
